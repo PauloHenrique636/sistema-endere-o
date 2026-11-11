@@ -29,9 +29,16 @@ $endereco = buscarCEP($cep);
         <?php 
             foreach($endereco as $data => $valor) {
                 echo "$data: $valor <br>";
-            
+              
             }
         ?>
     </ul>
+    <form action="salvar.php" method="POST">
+        <input type="hidden" name="cep" value="<?php echo htmlspecialchars($_GET['cep'])?>"
+        <button>Salvar</button>
+    </form>
 </div>
+<?php elseif(isset($endereco['erro'])):?>
+    <h2>CEP não encontrado</h2>
+    <p>O CEP ditado pelo usuário não existe</p>
 <?php endif;?>
