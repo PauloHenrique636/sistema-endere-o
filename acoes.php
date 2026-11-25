@@ -7,7 +7,7 @@ function salvarCep($cep,$logradouro,$bairro,$localidade,$uf,$estado,$regiao,$ddd
 }
  function buscarTabela($tabela) {
     global $conexao;
-    $sql = "SELECT * FROM `enderecos`"
+    $sql = "SELECT * FROM enderecos"
     $resultado = $conexao->query($sql);
     return $resultado;
     }

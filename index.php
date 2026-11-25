@@ -42,3 +42,5 @@ $endereco = buscarCEP($cep);
     <h2>CEP não encontrado</h2>
     <p>O CEP ditado pelo usuário não existe</p>
 <?php endif;?>
+
+<a href="lista.php"> Ver todos os CEP</a>
